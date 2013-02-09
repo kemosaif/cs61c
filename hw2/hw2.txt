@@ -1,0 +1,51 @@
+Problem 1:
+
+void shift(int a[], int n) {
+     int *p;
+     for (p=a; p != a + n-1; p++)
+         *p = *(p+1);
+}
+
+Problem 2:
+
+a)
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAX_NAME_LEN 127
+
+typedef struct {
+    char name[MAX_NAME_LEN + 1];
+    unsigned long sid;
+} Student;
+
+/* return the name of student s */
+const char* getName (const Student* s) {
+    return s->name;
+}
+
+/* set the name of student s
+If name is too long, cut off characters after the maximum number of characters allowed.
+*/
+void setName(Student* s, const char* name) {
+    int i;
+    for (i=0; i < MAX_NAME_LEN; i++) {
+        s->name[i] = *(name+i);
+    }
+    s->name[MAX_NAME_LEN +1] = '\0';
+}
+
+/* return the SID of student s */
+unsigned long getStudentID(const Student* s) {
+     return s->sid;
+}
+
+/* set the SID of student s */
+void setStudentID(Student* s, unsigned long sid) {
+    s->sid = sid;
+}
+
+b) Returns address of a local variable.
+
+Problem 3:

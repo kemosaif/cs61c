@@ -1,0 +1,26 @@
+a) Finding the sum of all the sizes of a set of arrays. While you could task each array out, and then find the size of it, it doesn't help to split that task up since finding the size of it doesn't require anything other than accessing the size field
+
+b)
+map(document, text)
+    for each word in text
+        emit (word, 1)
+    end
+end
+
+reduce(word, enum)
+    emit size of array
+end
+
+c)
+map(boardstate, (tier, winner)
+    if winner == white-won
+        emit ((boardstate, tier), 1)
+    else
+        emit ((boardstate, tier), 0)
+    end
+end
+
+reduce((boardstate, tier), enum)
+    rate = (sum of all nums in enum)/(length of enum)
+    emit ((boardstate, tier), rate)
+end

@@ -1,0 +1,3 @@
+p2) x0 + x1 + x2 + x3 + !x4
+
+p3)  A logic block tells the control whether rt is 0 or not. You have a mux that is connected to the RegWrite that for 1 passes the RegWrite on, and 0, passes in a 0. The control block gives that mux a 0 if the rt is not 0 and the instruction is movz, otherwise 1.

@@ -1,0 +1,43 @@
+Problem 1:
+a) 0
+b) 3219128320
+c) 2139095040
+d) 1077411840
+
+Problem 2:
+
+float unsignedToFloat( unsigned int x ) {
+
+    unsigned int result = 0;
+
+    int exp = -1;
+    for (int i=31; i >= 0; i--) {
+        int bit = (x >> i) & 1;
+        if (bit == 1 && exp < 0) {
+            exp = i;
+        }else if(bit == 1 && exp > 0) {
+            result = result  + (1 << (23+i-exp));
+        }
+    }
+
+    result = result + ((exp+127) << 23);
+    return *(float*)&result;
+}
+
+Problem 3:
+a) add $t3,$s5,$t2
+b) addi $t0,$t5,0xfff9
+c) sw $t3,4($k0)
+d) or $s1,$s1,$t1
+e) andi $s2,$t0,0x7001
+f) lui $s5,0xffff
+g) ori $s5,$s5,0xf2ab
+
+Problem 4:
+0x0c080400
+
+0x00852021
+0x24c6ffff
+0x14c0fffd
+0x00801000
+0x03e00008

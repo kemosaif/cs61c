@@ -1,0 +1,52 @@
+Jon San Miguel
+Lab Thursdays 6-8
+cs61c-sx
+
+Key:
+("jurisdiction", 0)  using 5 workers => 0a
+("jurisdiction", 0)  using 9 workers => 0b
+("court order", 1)   using 5 workers => 1a
+("court order", 1)   using 9 workers => 1b
+("in my opinion", 2) using 5 workers => 2a
+("in my opinion", 2) using 9 workers => 2b
+
+1.
+0a: maclay, judge, casino, viders, lsuc, _land_, sovreignty, allegiance, namo, person, mexico, subhierarchy, forfeiture, commemorations, exercising, and, property, supercedes, parental, pending
+0b: maclay, judge, casino, viders, lsuc, _land_, sovreignty, allegiance, namo, person, mexico, subhierarchy, forfeiture, commemorations, exercising, and, property, supercedes, parental, pending
+1a: workplaces of, videos as, you saying, you obeying, was severely, words the, usa and, was no, visitations the, you by, while i, was breaching, you like, you try, zach takes, vacation of, wishes adam, wrong in, wants to, way that
+1b: workplaces of, videos as, you saying, you obeying, was severely, words the, usa and, was no, visitations the, you by, while i, was breaching, you like, you try, zach takes, vacation of, wishes adam, wrong in, wants to, way that
+2a: your reputation for, zimhoni i f, you picked two, you to state, you state being, your 1 goal, your comment essentially, yourself to fly, your doc when, your views here, your stated reasons, zine in my, you d never, your approval if, your personal ideology, your other example, your plan seems, you quoted me, your list there, you found out
+2b: your reputation for, zimhoni i f, you picked two, you to state, you state being, your 1 goal, your comment essentially, yourself to fly, your doc when, your views here, your stated reasons, zine in my, you d never, your approval if, your personal ideology, your other example, your plan seems, you quoted me, your list there, you found out
+
+2.
+0a: 15m 27s - 348 Maps - 33 Reduces
+0b: 09m 02s - 348 Maps - 33 Reduces
+1a: 25m 42s - 348 Maps - 33 Reduces
+1b: 14m 46s - 348 Maps - 33 Reduces
+2a: 52m 59s - 412 Maps - 33 Reduces
+2b: 31m 36s - 412 Maps - 33 Reduces
+
+3.
+0a: .019 GB/s
+0b: .035 GB/s
+1a: .012 GB/s
+1b: .020 GB/s
+2a: .006 GB/s
+2b: .009 GB/s
+
+4.
+0: 84.2% speedup
+1: 66.6% speedup
+2: 50.0% speedup
+
+5.
+a: .025 $/GB
+b: .013 $/GB
+Total
+t: .019 $/GB
+
+6.
+$2.04 in EC2 credits nneeded to comlete project
+
+7.
+I used a combiner. It summed up the values of the keys, the same way that the reducer did, except only for one of the mappers. This made the reducers job easier, as well as lessen the amount of data that needed to be transferred from mappers to reducers.

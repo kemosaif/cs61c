@@ -1,0 +1,71 @@
+Problem 1
+
+a)
+1. servers
+2. petabyte
+3. supercomputers
+4. CPU
+5. RAM
+6. low-end servers
+7. multi-core processors
+8. datacenters
+9. embedded computers
+10. compiler
+11. desktop computers
+12. assembler
+13. instruction
+14. machine language
+15. assembly language
+16. operating systerm
+17. application software
+18. system software
+19. C
+20. high-level language
+21. terabyte
+22. 16 bit
+
+b)
+1.Layers of Representation/Interpretation
+Moore's Law
+Principle of Locality/Memory Hierarchy
+Parallelism
+Performance Measurement & Improvement
+Dependability via Redundancy
+2. Only Project 3 and extra credit
+3. None
+4. 20%
+5. 100%
+
+c)
+1. Total / IT, Total can never be less than IT since IT is a part of the Total, so Total/IT must be >= 1
+2. Irrelevant
+
+
+Problem 2
+
+a) Finding the sum of all the sizes of a set of arrays. While you could task each array out, and then find the size of it, it doesn't help to split that task up since finding the size of it doesn't require anything other than accessing the size field
+
+b)
+map(document, text)
+    for each word in text
+        emit (word, 1)
+    end
+end
+
+reduce(word, enum)
+    emit size of array
+end
+
+c)
+map(boardstate, (tier, winner)
+    if winner == white-won
+        emit ((boardstate, tier), 1)
+    else
+        emit ((boardstate, tier), 0)
+    end
+end
+
+reduce((boardstate, tier), enum)
+    rate = (sum of all nums in enum)/(length of enum)
+    emit ((boardstate, tier), rate)
+end

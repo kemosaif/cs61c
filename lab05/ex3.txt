@@ -1,0 +1,2 @@
+1. $a2 and a3
+2. Not manipluated. Rather their address is stored into $a1 and $a0, plus an offset based on the iteration of the loop that has the address of the next spot in the array. One of those spots is then set to the other.

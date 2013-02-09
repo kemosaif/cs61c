@@ -1,0 +1,14 @@
+1. .data = Subsequent items stored in Data segment at next available address
+   .text = Subsequent items stored in Text segment at next available address
+   .word = Store the listed value(s) as 32 bit words on word boundary
+
+2. Using checkboxes next to each instruction in the Text Segment window
+
+3. Use "Go" to resume execution. Use "Step" mode to single-step through
+
+4. You can find out the contents of a register by looking at the Data Segment section of Mars. You can edit these values directly as well.
+
+5. 0x10010000
+   233 is the 13th fibonacci n umber
+
+6. Syscall is a instruction to system services. You load the service number in register $v0. Load argument values, if any, in $a0, $a1, $a2, or $f12. Issue syscall.

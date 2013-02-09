@@ -1,0 +1,9 @@
+Four single precision floating point divisions
+     _m128__mm_div_ps
+
+Sixteen "max" operations across signed 8-bit integers
+     _m128i_mm_max_epi8
+
+Arithmetic right shifts of eight signed 17-bit integers
+     _m128i_mm_srai_epi16
+

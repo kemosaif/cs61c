@@ -1,0 +1,16 @@
+ASM_TESTS="insts rt3 rt13 rt25 addiu addu and andi beq bne j jal jr lbu lui lw mem_jump sb sll sra sltu srl subu sw"
+
+echo "The following tests will be executed: $ASM_TESTS"
+echo ""
+echo "Differences will be printed out for each executed test; a blank output indicates that the test was passed."
+echo ""
+echo "NOTE: lw and sw were designed to error.  Use ./mips-sim -i mipscode/lw to verify that this is the case!"
+echo ""
+
+for test in $ASM_TESTS
+    do
+	echo ""
+	echo "== Executing test: $test == "
+	./mips-sim -r mipscode/$test > test_results/$test.trace
+	diff test_results/$test.trace expected_results/$test.trace
+    done

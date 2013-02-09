@@ -1,0 +1,35 @@
+.data
+msg1:.asciiz "Please insert text (max 20 characters): "
+msg2:.asciiz "\nThe length of the text is: "
+str1: .space 20
+.text
+.globl main
+main:
+addi $v0, $v0,4
+la $a0,msg1
+syscall #print msg1
+li $v0,8
+la $a0,str1
+addi $a1,$zero,20
+syscall   #get string 1
+
+la $a0,str1  #pass address of str1
+jal len
+
+len: 
+lb $t1,($a0)
+beqz $t1,exit
+add $a0,$a0,1
+add $t0,$t0,1
+j len
+
+exit: 
+la $a0,msg2 
+li $v0,4
+syscall
+move $a0,$t0 #output the results 
+li $v0,1
+syscall
+
+li $v0,10
+syscall
